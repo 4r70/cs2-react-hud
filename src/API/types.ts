@@ -159,3 +159,28 @@ export type Knife =
   | "knife_ursus"//
   | "knife_widowmaker"//
   | "knife_canis";//
+
+export interface GameMapRadar {
+  id: number;
+  lhmId: string;
+  originHeight?: number;
+  originX?: number;
+  originY?: number;
+  pxPerUX?: number;
+  pxPerUY?: number;
+  radar: string;
+  visibleOverHeight: number | null;
+  visibleUnderHeight: number | null;
+}
+
+export interface GameMap {
+  _id: string;
+  name: string;
+  lhmId: string;
+  game: string;
+  image?: string;
+  radars: GameMapRadar[];
+  verticalImage?: string;
+  inVetoPool: boolean;
+  isActive: boolean;
+}
