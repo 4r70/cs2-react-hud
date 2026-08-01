@@ -1,10 +1,10 @@
 {
-    "name":"LHM CS2 Default HUD",
+    "name":"TipiLAN",
     "version":"1.0.6",
-    "author":"Lexogrine",
+    "author":"Arto Reinik",
     "legacy": false,
     "radar": true,
-    "killfeed": false,
+    "killfeed": true,
     "game":"cs2",
     "boltobserv":{
         "css":false,
