@@ -1,4 +1,7 @@
 @import "fonts/montserrat.css";
+@import "fonts/work_sans.css";
+@import "fonts/vipnagorgialla.css";
+
 html,
 body,
 #root {
@@ -8,7 +11,7 @@ body,
 
 body {
   margin: 0;
-  font-family: "Rajdhani", 'Montserrat', 'Roboto', sans-serif;
+  font-family: "Work Sans", "Vipnagorgialla", "Rajdhani", 'Montserrat', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*background-image: url('./assets/bg.png');/**/

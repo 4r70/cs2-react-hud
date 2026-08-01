@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Vipnagorgialla';
+    font-style: normal;
+    font-weight: bold;
+    src: url('./vipnagorgialla/Vipnagorgialla Bd.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Vipnagorgialla';
+    font-style: italic;
+    font-weight: bold;
+    src: url('./vipnagorgialla/Vipnagorgialla Bd It.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Vipnagorgialla';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./vipnagorgialla/Vipnagorgialla Rg.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Vipnagorgialla';
+    font-style: italic;
+    font-weight: normal;
+    src: url('./vipnagorgialla/Vipnagorgialla Rg It.otf') format('opentype');
+}
