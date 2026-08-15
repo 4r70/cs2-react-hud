@@ -39,8 +39,8 @@ code {
 }
 
 :root {
-  --main-panel-color: rgba(15, 28, 46, 0.83);
-  --sub-panel-color: rgba(10, 18, 31, 0.83);
+  --main-panel-color: rgba(15, 28, 46, 0.73);
+  --sub-panel-color: rgba(10, 18, 31, 0.73);
   --white-dull: rgba(10, 5, 5, 0.25);
   --white-full: rgba(229, 229, 238, 1);
   --white-half: rgba(229, 229, 238, 0.5);
@@ -51,7 +51,7 @@ code {
   --color-ct: #5788a8;
   --color-new-t: #EDAE49;
   --color-new-ct: #30C5FF;
-  --color-bomb: #C84630;
+  --color-bomb: rgba(200, 70, 48, 0.8);
   --color-defuse: #4D6CFA;
 }
 

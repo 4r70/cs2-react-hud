@@ -21,11 +21,22 @@
 	flex-direction: row;
 	position: fixed;
 	justify-content: center;
+	align-items: center;
 	width: 1148px;
-	height: 70px;
 	top: 10px;
 	left: 50%;
 	transform: translateX(-50%);
+	background-image: radial-gradient(rgba(10, 5, 5, 0.5) 1px, var(--main-panel-color) 1px);
+	background-size: 8px 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 10px;
+	backdrop-filter: blur(20px) saturate(160%);
+	-webkit-backdrop-filter: blur(20px) saturate(160%);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.15),
+		inset 0 0 40px rgba(255, 255, 255, 0.04),
+		0 8px 32px rgba(0, 0, 0, 0.45);
+	border-radius: 4px;
 	.CT {
 		color: var(--color-new-ct);
 		.round-thingy {
@@ -48,14 +59,12 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
+		justify-content: center;
 		width: 126px;
-		height: 115px;
-		margin-left: 8px;
-		margin-right: 8px;
-		background-color: var(--sub-panel-color);
-        top: -10px;
+		height: 70px;
+		margin-inline: 8px;
         &.no-bo {
-            height: 87px;
+
         }
 	}
 	#bomb_container {
@@ -96,10 +105,10 @@
 	#round_timer_text {
 		display: flex;
 		width: 100%;
-		height: 55px;
 		justify-content: center;
-		font-size: 34px;
-		font-weight: bold;
+		font-family: "Work Sans";
+		font-size: 32px;
+		font-weight: 800;
 		z-index: 1;
 		color: var(--white-full);
         align-items: flex-end;
@@ -111,11 +120,10 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 27px;
 		align-items: center;
 		justify-content: center;
-		font-size: 14px;
-		font-weight: bold;
+		font-size: 16px;
+		font-weight: 700;
 		z-index: 1;
         color: var(--white-full);
         &.hide {
@@ -133,7 +141,6 @@
 			height: 70px;
 			align-items: center;
 			overflow: hidden;
-			background-color: var(--sub-panel-color);
 			img {
 				max-width: 90%;
 				max-height: 65%;
@@ -166,11 +173,10 @@
 		height: 70px;
 		align-items: center;
 		justify-content: center;
-		font-weight: 600;
+		font-weight: 700;
 		font-size: 30px;
-		font-style: italic;
 		text-transform: uppercase;
-		background-color: var(--sub-panel-color);
+		font-family: "Vipnagorgialla";
 	}
 	.round-thingy {
 		width: 60px;
@@ -193,9 +199,9 @@
 		height: 70px;
 		align-items: center;
 		justify-content: center;
-		font-weight: 600;
-		font-size: 36px;
-		background-color: var(--sub-panel-color);
+		font-weight: 900;
+		font-size: 40px;
+		font-family: "Vipnagorgialla";
 	}
 	.bar {
 		display: flex;
