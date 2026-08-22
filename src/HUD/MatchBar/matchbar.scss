@@ -223,14 +223,24 @@
 	opacity: 1;
 	width: 503px;
 	height: 50px;
-	top: 70px;
+	top: 78px;
 	align-items: center;
-	color: black;
+	color: var(--white-full);
 	justify-content: center;
-	background-color: white;
+background-image: radial-gradient(rgba(10, 5, 5, 0.5) 1px, var(--main-panel-color) 1px);
+	background-size: 8px 10px;
+	border: 1px solid var(--glass-border-color);
+	box-shadow:
+		inset 0 1px 0 var(--glass-inner-highlight),
+		inset 0 0 30px var(--glass-inner-glow),
+		0 8px 24px var(--glass-drop-shadow);
+	backdrop-filter: blur(20px) saturate(160%);
+	-webkit-backdrop-filter: blur(20px) saturate(160%);
 	font-size: 20px;
-	font-family: Montserrat;
+	font-family: "Vipnagorgialla";
+    letter-spacing: 0.08em;
     font-weight: 600;
+	border-radius: 4px;
     &.show {
         display: flex;
         animation: ShowWinCycle 5s linear 1;
@@ -250,14 +260,23 @@
 	opacity: 1;
 	width: 503px;
 	height: 49px;
-	top: 70px;
+	top: 78px;
 	align-items: center;
 	color: white;
     justify-content: center;
-    background-color: rgba(0,0,0,0.65);
+	background-image: radial-gradient(rgba(10, 5, 5, 0.5) 1px, var(--main-panel-color) 1px);
+	background-size: 8px 10px;
+	border: 1px solid var(--glass-border-color);
+	box-shadow:
+		inset 0 1px 0 var(--glass-inner-highlight),
+		inset 0 0 30px var(--glass-inner-glow),
+		0 8px 24px var(--glass-drop-shadow);
+	backdrop-filter: blur(20px) saturate(160%);
+	-webkit-backdrop-filter: blur(20px) saturate(160%);
+	border-radius: 4px;
 	.defuse_plant_bar {
 		height: 49px;
-		background-color: #3c3c3c;
+		background-color: rgba(255, 255, 255, 0.14);
 		position: absolute;
 		width: 0%;
 	}
@@ -265,6 +284,8 @@
 		z-index: 1;
 		display: flex;
 		text-transform: uppercase;
+		font-family: "Vipnagorgialla";
+		letter-spacing: 0.06em;
 		align-items: flex-end;
 		svg {
 			margin-right: 13px;
@@ -292,7 +313,7 @@
 	flex-direction: row;
 	position: fixed;
 	justify-content: center;
-	top: 80px;
+	top: 88px;
 	width: 1148px;
 	height: 50px;
 	left: 50%;
@@ -337,6 +358,8 @@
 	justify-content: center;
 	font-size: 12px;
 	font-weight: bold;
+	font-family: "Vipnagorgialla";
+	letter-spacing: 0.06em;
 	color: var(--white-full);
 }
 .container {
@@ -386,13 +409,13 @@
 	box-sizing: border-box;
 }
 .wins_box.CT {
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(6, 13, 24, 0.54);
 }
 .wins_box.CT.win {
 	background-color: var(--color-new-ct);
 }
 .wins_box.T {
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(6, 13, 24, 0.54);
 }
 .wins_box.T.win {
 	background-color: var(--color-new-t);

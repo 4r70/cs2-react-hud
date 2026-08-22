@@ -144,8 +144,11 @@
                 }
             }
         }
+        &:first-child .player_data {
+            border-radius: 4px 4px 0 0;
+        }
         &:last-child .player_data {
-            border-radius: 0 0 20px 20px;
+            border-radius: 0 0 4px 4px;
         }
         .player_side_bar {
             width: 10px;
@@ -180,7 +183,14 @@
             }
         }
         .player_data {
-            background-color: var(--sub-panel-color);
+            background: linear-gradient(150deg, rgba(18, 31, 49, 0.84), rgba(8, 15, 26, 0.78));
+            border: 1px solid var(--glass-border-color);
+            box-shadow:
+                inset 0 1px 0 var(--glass-inner-highlight),
+                inset 0 0 24px var(--glass-inner-glow),
+                0 6px 18px var(--glass-drop-shadow);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
             width: 415px;
             display: flex;
             flex-direction: row;
@@ -250,11 +260,12 @@
                         white-space: nowrap;
                         .roundkills-container {
                             position: absolute;
-                            background-image: url('./../../assets/images/icon_skull_default.svg');
+                            background-image: url('./../../assets/images/crosshair.svg');
                             background-repeat: no-repeat;
-                            background-size: 10px;
-                            background-position: left 2px;
-                            padding-left: 16px;
+                            background-size: 16px;
+                            background-position: center;
+                            filter: brightness(0) invert(1);
+                            padding-left: 32px;
                             font-size: 13px;
                         }
                         div span {
@@ -337,12 +348,23 @@
     display: flex;
     flex-direction: column;
     width: 180px;
-    background-color: rgba(0,0,0,0.5);
+    background-image: radial-gradient(var(--glass-dot-color) 1px, var(--main-panel-color) 1px);
+    background-size: 8px 10px;
+    border: 1px solid var(--glass-border-color);
+    box-shadow:
+        inset 0 1px 0 var(--glass-inner-highlight),
+        inset 0 0 24px var(--glass-inner-glow),
+        0 6px 18px var(--glass-drop-shadow);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
     position: fixed;
     right: 10px;
     top: 10px;
     opacity: 1;
+    font-family: "Vipnagorgialla";
+    font-weight: 600;
     transition: opacity 1s;
+    border-radius: 4px;
     .counter_container {
         display: flex;
         height: 45px;
@@ -351,12 +373,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size:30px;
+            font-size:20px;
             color: white;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(6, 13, 24, 0.38);
         }
         .team_counter {
-            background-color: rgba(0,0,0,0.75);
+            font-size: 30px;
         }
         .CT {
             color: var(--color-new-ct);
@@ -371,12 +393,26 @@
         text-align: center;
         height:20px;
         font-size:14px;
+        font-family: "Vipnagorgialla";
+        letter-spacing: 0.08em;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(0,0,0,0.75);
+        background-color: rgba(6, 13, 24, 0.52);
     }
     &.hide {
         opacity: 0;
     }
+}
+
+.layout:has(.boxes.left .utilitybox:not(.hide)) .teambox.left .player:first-child .player_data,
+.layout:has(.boxes.left .sidebox:not(.hide)) .teambox.left .player:first-child .player_data,
+.layout:has(.boxes.left .moneybox:not(.hide)) .teambox.left .player:first-child .player_data {
+    border-radius: 0;
+}
+
+.layout:has(.boxes.right .utilitybox:not(.hide)) .teambox.right .player:first-child .player_data,
+.layout:has(.boxes.right .sidebox:not(.hide)) .teambox.right .player:first-child .player_data,
+.layout:has(.boxes.right .moneybox:not(.hide)) .teambox.right .player:first-child .player_data {
+    border-radius: 0;
 }

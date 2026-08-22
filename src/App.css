@@ -11,7 +11,7 @@ body,
 
 body {
   margin: 0;
-  font-family: "Work Sans", "Vipnagorgialla", "Rajdhani", 'Montserrat', 'Roboto', sans-serif;
+  font-family: "Work Sans", "Rajdhani", 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*background-image: url('./assets/bg.png');/**/
@@ -41,8 +41,13 @@ code {
 :root {
   --main-panel-color: rgba(15, 28, 46, 0.73);
   --sub-panel-color: rgba(10, 18, 31, 0.73);
+  --glass-dot-color: rgba(10, 5, 5, 0.5);
+  --glass-border-color: rgba(255, 255, 255, 0.18);
+  --glass-inner-highlight: rgba(255, 255, 255, 0.15);
+  --glass-inner-glow: rgba(255, 255, 255, 0.04);
+  --glass-drop-shadow: rgba(0, 0, 0, 0.45);
   --white-dull: rgba(10, 5, 5, 0.25);
-  --white-full: rgba(229, 229, 238, 1);
+  --white-full: rgba(255, 255, 255, 1);
   --white-half: rgba(229, 229, 238, 0.5);
   --color-gray: rgba(163, 155, 176, 1.0);
   --color-moneys: #69B578;
@@ -53,6 +58,10 @@ code {
   --color-new-ct: #30C5FF;
   --color-bomb: rgba(200, 70, 48, 0.8);
   --color-defuse: #4D6CFA;
+}
+
+.layout {
+  font-family: "Work Sans", "Rajdhani", 'Roboto', sans-serif;
 }
 
 

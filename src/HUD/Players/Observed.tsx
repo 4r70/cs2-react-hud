@@ -2,15 +2,14 @@ import React, { useState } from "react";
 import { Player } from "csgogsi";
 import Weapon from "./../Weapon/Weapon";
 import Avatar from "./Avatar";
-import TeamLogo from "./../MatchBar/TeamLogo";
 import "./observed.scss";
 import { getCountry } from "./../countries";
-import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icons';
+import { ArmorHelmet, ArmorFull, HealthFull, Bullets, Skull, Kill } from './../../assets/Icons';
 import { apiUrl } from './../../API';
 import { useAction } from "../../API/contexts/actions";
 
 
-const Statistic = React.memo(({ label, value }: { label: string; value: string | number, }) => {
+const Statistic = React.memo(({ label, value }: { label: React.ReactNode; value: string | number, }): JSX.Element => {
 	return (
 		<div className="stat">
 			<div className="label">{label}</div>
@@ -38,7 +37,6 @@ const Observed = ({ player }: { player: Player | null }) => {
 		<div className={`observed ${player.team.side}`}>
 			<div className="main_row">
 				<Avatar teamId={player.team.id} url={player.avatar} steamid={player.steamid} height={140} width={140} showCam={showCam} slot={player.observer_slot} />
-				<TeamLogo team={player.team} height={35} width={35} />
 				<div className="username_container">
 					<div className="username">{player.name}</div>
 					<div className="real_name">{player.realName}</div>
@@ -64,10 +62,8 @@ const Observed = ({ player }: { player: Player | null }) => {
 					<div className="health text">{player.state.armor}</div>
 				</div>
 				<div className="statistics">
-					<Statistic label={"K"} value={stats.kills} />
-					<Statistic label={"A"} value={stats.assists} />
-					<Statistic label={"D"} value={stats.deaths} />
-					<Statistic label={"K/D"} value={ratio.toFixed(2)} />
+					<Statistic label={<Kill />} value={stats.kills} />
+					<Statistic label={<Skull />} value={stats.deaths} />
 				</div>
 				<div className="ammo">
 					<div className="ammo_icon_container">
