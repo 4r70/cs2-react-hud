@@ -1,7 +1,6 @@
 import { useState } from "react";
 import TeamBox from "./../Players/TeamBox";
 import MatchBar from "../MatchBar/MatchBar";
-import SeriesBox from "../MatchBar/SeriesBox";
 import Observed from "./../Players/Observed";
 import RadarMaps from "./../Radar/RadarMaps";
 import Trivia from "../Trivia/Trivia";
@@ -63,7 +62,6 @@ const Layout = ({game,match}: Props) => {
       <MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />
       <Pause  phase={game.phase_countdowns}/>
       <Timeout map={game.map} phase={game.phase_countdowns} />
-      <SeriesBox map={game.map} match={match} />
 
       <Tournament />
 

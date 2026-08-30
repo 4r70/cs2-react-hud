@@ -4,7 +4,7 @@ import TeamScore from "./TeamScore";
 import Bomb from "./../Timers/BombTimer";
 import { useBombTimer } from "./../Timers/Countdown";
 import { Match } from './../../API/types';
-
+import SeriesBox from "./SeriesBox";
 
 function stringToClock(time: string | number, pad = true) {
   if (typeof time === "string") {
@@ -65,6 +65,7 @@ const Matchbar = (props: IProps) => {
             <div id="round_now" className={isPlanted ? "hide":""}>{getRoundLabel(map.round)}</div>
             <Bomb />
           </div>
+          <SeriesBox map={map} match={match} />
           <div className={`score right ${right.side}`}>{right.score}</div>
           <TeamScore team={right} orientation={"right"} timer={right.side === "CT" ? defuseTimer : plantTimer} />
         </div>
