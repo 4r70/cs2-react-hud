@@ -48,6 +48,8 @@ html, body, .map-container {
     position: relative;
     transform: scale(1);
     transition: all 0.5s;
+    background-color: rgba(18, 31, 49, 0.15);
+    border-radius: 8px;
 }
 .map .player, .map .grenade, .map .bomb {
     position: absolute;
