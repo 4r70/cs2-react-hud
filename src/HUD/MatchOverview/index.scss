@@ -6,8 +6,7 @@
 	flex-direction: column;
 	right: 10px;
 	top: 375px;
-	background-image: radial-gradient(var(--glass-dot-color) 1px, var(--main-panel-color) 1px);
-	background-size: 5px 5px;
+	background: linear-gradient(150deg, rgba(18, 31, 49, 0.84), rgba(8, 15, 26, 0.78));
 	border: 1px solid var(--glass-border-color);
 	box-shadow:
 		inset 0 1px 0 var(--glass-inner-highlight),
@@ -19,6 +18,7 @@
 	width: 250px;
 	color: white;
 	font-family: "Work Sans";
+	border-radius: 4px;
 }
 .match-overview.show {
 	opacity: 1;
@@ -39,8 +39,8 @@
 }
 .match-overview-title {
 	text-align: center;
-	font-weight: 600;
-	font-family: "Vipnagorgialla";
+	font-weight: 700;
+	font-family: "Work Sans";
 	letter-spacing: 0.06em;
 	background-color: rgba(6, 13, 24, 0.36);
 	padding: 3px 0;
@@ -48,6 +48,8 @@
 .match-overview-vs {
 	width: 20px;
 	flex: unset;
+	font-weight: 700;
+	font-family: "Vipnagorgialla";
 	background-color: rgba(6, 13, 24, 0.46);
 	font-size: 30px;
 }
