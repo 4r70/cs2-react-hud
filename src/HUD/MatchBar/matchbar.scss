@@ -285,7 +285,8 @@
 		z-index: 1;
 		display: flex;
 		text-transform: uppercase;
-		font-family: "Vipnagorgialla";
+		font-family: "Work Sans";
+		font-weight: bold;
 		letter-spacing: 0.06em;
 		align-items: flex-end;
 		svg {
@@ -365,7 +366,6 @@
 	width: 20px;
 	height: 4px;
 	box-sizing: border-box;
-	border-radius: 1px;
 }
 .wins_box.CT {
 	background-color: rgba(6, 13, 24, 0.54);
