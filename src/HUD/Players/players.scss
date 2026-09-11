@@ -189,10 +189,10 @@
                         top: 0;
                         left: 0;
                         bottom: 0;
-                        background-color: var(--color-new-ct);
                         transition: width 0.75s;
                         z-index: 0;
                     }
+                    
                     &.low .health_bar_fill {
                         background-color: red;
                     }
