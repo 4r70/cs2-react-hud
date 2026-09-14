@@ -12,18 +12,19 @@ const SeriesBox = ({ map, match }: Props) => {
     const right = map.team_ct.orientation === "left" ? map.team_t : map.team_ct;
     return (
       <div id="series_overlay">
-        <div className="series_track left">
-          {new Array(amountOfMaps).fill(0).map((_, i) => (
-            <div key={i} className={`wins_box win ${left.side}`} />
-          ))}
+          <div className={`series_track left `}>
+              {new Array(amountOfMaps).fill(0).map((_, i) => (
+                <div key={i} className={`wins_box ${left.matches_won_this_series > i ? "win" : ""} ${left.side}`} />
+              ))}
+          </div>
+          <div className={`series_track right `}>
+              {new Array(amountOfMaps).fill(0).map((_, i) => (
+                <div key={i} className={`wins_box ${right.matches_won_this_series > i ? "win" : ""} ${right.side}`} />
+              ))}
+          </div>
         </div>
-        <div className="series_track right">
-          {new Array(amountOfMaps).fill(0).map((_, i) => (
-            <div key={i} className={`wins_box ${right.matches_won_this_series > i ? "win" : ""} ${right.side}`} />
-          ))}
-        </div>
-      </div>
     );
 }
+
 
 export default SeriesBox;
